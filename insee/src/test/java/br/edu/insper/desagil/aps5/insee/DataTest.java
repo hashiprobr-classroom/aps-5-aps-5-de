@@ -18,17 +18,17 @@ public class DataTest {
     }
     @Test
     void constroi(){
-        assertEquals();
+        assertEquals(1970,ano);
+        assertEquals(1,dia);
+        assertEquals(1,mes);
     }
     @Test
     void naoAtualizaMenor(){
-        String teste=novaData.atualiza(0,0,1969);
-        assertEquals(novaData,teste);
+        assertEquals();
     }
     @Test
     void atualizaMaior(){
-        String teste=novaData.atualiza(32,13,2024);
-        assertEquals("31/12/2024",teste);
+
     }
     @Test
     void atualiza(){
@@ -36,7 +36,7 @@ public class DataTest {
     }
     @Test
     void comoZero(){
-        assertEquals(0,novaData.contaDias(1,1,1970));
+        assertEquals(0,contaDias(1,1,1970));
     }
     @Test
     void comoAgora(){
