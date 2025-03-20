@@ -1,16 +1,20 @@
 package br.edu.insper.desagil.aps5.insee;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Data extends Referencia{
-    public int ano = 1970;
-    public int mes = 1;
-    public int dia = 1;
-
+    public int ano;
+    public int mes;
+    public int dia;
     public Map<Integer, Integer> limites;
 
-    public Data(Map<Integer, Integer> limites) {
-        this.limites = limites;
+
+    public Data(int ano, int mes, int dia) {
+        this.ano = 1970;
+        this.mes = 1;
+        this.dia = 1;
+        this.limites=new HashMap<>();
         limites.put(1, 31);
         limites.put(2, 28);
         limites.put(3, 31);
@@ -24,6 +28,8 @@ public abstract class Data extends Referencia{
         limites.put(11, 30);
         limites.put(12, 31);
     }
+
+
 
     public int getMes() {
         return mes;
@@ -55,7 +61,7 @@ public abstract class Data extends Referencia{
         }
     }
     @Override
-    public int contaDias(int ano, int mes, int dia){
+    public int contaDias(int dia, int mes, int ano){
         int soma=0;
         int difAno=ano-1970;
         for(int i=1;i<this.mes;i++){

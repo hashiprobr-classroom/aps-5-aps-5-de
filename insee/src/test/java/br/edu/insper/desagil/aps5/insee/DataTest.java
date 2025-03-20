@@ -6,14 +6,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DataTest {
-    private static String novaData;
+    private static int ano;
+    private static int dia;
+    private static int mes;
     @BeforeEach
     void setUp(){
-        novaData="1/1/1970";
+        int ano=1970;
+        int mes=1;
+        int dia=1;
+
     }
     @Test
     void constroi(){
-        assertEquals("1/1/1970",novaData);
+        assertEquals();
     }
     @Test
     void naoAtualizaMenor(){

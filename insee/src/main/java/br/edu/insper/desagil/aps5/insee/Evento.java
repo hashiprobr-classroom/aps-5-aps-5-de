@@ -16,4 +16,12 @@ public class Evento {
         this.inicio = inicio;
         this.fim = fim;
     }
+    public boolean valido(){
+        if(fim.metodoDataTempo()>inicio.metodoDataTempo()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
