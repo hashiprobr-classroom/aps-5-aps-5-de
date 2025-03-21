@@ -1,22 +1,23 @@
 package br.edu.insper.desagil.aps5.insee;
 
 public abstract class DataTempo extends Referencia{
-    String data;
-    int tempo;
-    public DataTempo(String data) {
-        this.data = data;
-    }
+    Data data;
+    Tempo tempo;
 
-    public String getData() {
+    public Data getData() {
         return data;
     }
 
-    public DataTempo(int tempo) {
-        this.tempo = tempo;
-    }
-
-    public int getTempo() {
+    public Tempo getTempo() {
         return tempo;
     }
 
+    public DataTempo(Data data, Tempo tempo) {
+        this.data = data;
+        this.tempo = tempo;
+    }
+    @Override
+    public int metodoDataTempo(){
+        return contaDias(data.getAno(),data.getMes(), data.getDia())+contaMinutos(tempo.getHora(),tempo.getMinuto());
+    }
 }

@@ -6,24 +6,29 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DataTest {
-    private static String novaData;
+    private static int ano;
+    private static int dia;
+    private static int mes;
     @BeforeEach
     void setUp(){
-        novaData="1/1/1970";
+        int ano=1970;
+        int mes=1;
+        int dia=1;
+
     }
     @Test
     void constroi(){
-        assertEquals("1/1/1970",novaData);
+        assertEquals(1970,ano);
+        assertEquals(1,dia);
+        assertEquals(1,mes);
     }
     @Test
     void naoAtualizaMenor(){
-        String teste=novaData.atualiza(0,0,1969);
-        assertEquals(novaData,teste);
+        assertEquals();
     }
     @Test
     void atualizaMaior(){
-        String teste=novaData.atualiza(32,13,2024);
-        assertEquals("31/12/2024",teste);
+
     }
     @Test
     void atualiza(){
@@ -31,7 +36,7 @@ public class DataTest {
     }
     @Test
     void comoZero(){
-        assertEquals(0,novaData.contaDias(1,1,1970));
+        assertEquals(0,contaDias(1,1,1970));
     }
     @Test
     void comoAgora(){

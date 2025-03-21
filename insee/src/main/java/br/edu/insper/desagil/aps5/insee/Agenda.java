@@ -7,15 +7,18 @@ public class Agenda {
     public List<Evento> eventos;
 
     public Agenda(List<Evento> eventos) {
-        this.eventos = eventos;
+        this.eventos = new ArrayList<>();
     }
 
     public List<Evento> getEventos() {
         return eventos;
     }
     public void adiciona(Evento evento){
-        if(evento.getInicio().valido(evento.getFim())){
+        if(evento.valido()){
             eventos.add(evento);
+        }
+        else{
+            throw new IllegalArgumentException("Evento inválido!");
         }
     }
 }
