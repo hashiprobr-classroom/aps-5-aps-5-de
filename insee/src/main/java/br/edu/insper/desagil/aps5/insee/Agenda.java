@@ -6,18 +6,18 @@ import java.util.List;
 public class Agenda {
     public List<Evento> eventos;
 
-    public Agenda(List<Evento> eventos) {
+    public Agenda() {
         this.eventos = new ArrayList<>();
     }
 
     public List<Evento> getEventos() {
         return eventos;
     }
-    public void adiciona(Evento evento){
-        if(evento.valido()){
+
+    public void adiciona(Evento evento) {
+        if (evento.valido()) {
             eventos.add(evento);
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("Evento inválido!");
         }
     }

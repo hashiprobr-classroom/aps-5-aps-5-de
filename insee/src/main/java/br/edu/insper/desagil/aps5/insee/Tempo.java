@@ -21,39 +21,27 @@ public class Tempo extends Referencia{
         if(hora<0){
             this.hora=0;
         }
-        if(hora>24){
+        else if(hora>=24){
             this.hora=23;
         }
+        else{
+            this.hora = hora;
+        }
+
         if(minuto<0){
             this.minuto=0;
         }
-        if(minuto>59){
+        else if(minuto>59){
             this.minuto=59;
+        }
+        else{
+            this.minuto = minuto;
         }
     }
 
     @Override
-    public int contaDias() {
-        return 0;
-    }
-
-    @Override
-    public int contaMinutos(int ano, int mes, int dia) {
-        return 0;
-    }
-
-    @Override
-    public int metodo() {
-        return 0;
-    }
-
-    @Override
-    public int contaMinutos(int hora, int minuto) {
+    public int conta() {
         return (hora*60)+minuto;
     }
 
-    @Override
-    public int metodoDataTempo() {
-        return 0;
-    }
 }

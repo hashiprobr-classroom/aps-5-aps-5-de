@@ -4,6 +4,10 @@ public abstract class DataTempo extends Referencia{
     Data data;
     Tempo tempo;
 
+    public DataTempo(Data data, Tempo tempo) {
+        this.data = data;
+        this.tempo = tempo;
+    }
     public Data getData() {
         return data;
     }
@@ -12,12 +16,12 @@ public abstract class DataTempo extends Referencia{
         return tempo;
     }
 
-    public DataTempo(Data data, Tempo tempo) {
-        this.data = data;
-        this.tempo = tempo;
-    }
     @Override
-    public int metodoDataTempo(){
-        return contaDias();
+    public int conta(){
+        int soma = 0;
+        soma += this.data.conta() * 24 * 60;
+        soma += this.tempo.conta();
+        return soma;
     }
+
 }

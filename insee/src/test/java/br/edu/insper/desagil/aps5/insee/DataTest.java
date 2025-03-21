@@ -42,11 +42,11 @@ public class DataTest {
 
     @Test
     void comoZero(){
-       assertEquals(0,data.contaDias());
+       assertEquals(0,data.conta());
     }
     @Test
     void comoAgora(){
         data.atualiza(2024,9,26);
-        assertEquals(19978,data.contaDias());
+        assertEquals(19978,data.conta());
     }
 }

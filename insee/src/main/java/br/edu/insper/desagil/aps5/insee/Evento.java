@@ -17,11 +17,6 @@ public class Evento {
         this.fim = fim;
     }
     public boolean valido(){
-        if(fim.metodoDataTempo()>inicio.metodoDataTempo()){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return(inicio.conta() > fim.conta());
     }
 }

@@ -14,15 +14,6 @@ public abstract class Referencia {
         this.observacao = observacao;
     }
 
+    public abstract int conta();
 
-
-    public abstract int contaDias();
-
-    public abstract int contaMinutos(int ano, int mes, int dia);
-
-    public abstract int metodo();
-
-    public abstract int contaMinutos(int hora, int minuto);
-
-    public abstract int metodoDataTempo();
 }
