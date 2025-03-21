@@ -33,7 +33,7 @@ public class Tempo extends Referencia{
     }
 
     @Override
-    public int contaDias(int ano, int mes, int dia) {
+    public int contaDias() {
         return 0;
     }
 

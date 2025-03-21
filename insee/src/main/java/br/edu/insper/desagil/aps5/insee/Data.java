@@ -69,14 +69,19 @@ public class Data extends Referencia{
     }
 
     @Override
-    public int contaDias(int dia, int mes, int ano){
+    public int contaDias(){
         int soma=0;
-        int difAno=ano-1970;
-        for(int i=1;i<this.mes;i++){
-            soma+=limites.get(mes);
+
+        int difAno = this.ano - 1970;
+        int difDia= this.dia - 1;
+
+        for(int i=0;this.mes + i < 12;i++){
+            soma+= limites.get(mes+i);
         }
-        int difDia=dia-1;
-        soma+=difDia+difAno;
+
+        soma -= 31;
+        soma += difDia + (difAno * 365);
+
         return soma;
     }
 

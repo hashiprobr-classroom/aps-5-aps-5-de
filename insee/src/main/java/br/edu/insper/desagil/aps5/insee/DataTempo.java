@@ -18,6 +18,6 @@ public abstract class DataTempo extends Referencia{
     }
     @Override
     public int metodoDataTempo(){
-        return contaDias(data.getAno(),data.getMes(), data.getDia())+contaMinutos(tempo.getHora(),tempo.getMinuto());
+        return contaDias();
     }
 }

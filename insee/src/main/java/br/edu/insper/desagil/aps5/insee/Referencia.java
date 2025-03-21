@@ -16,7 +16,7 @@ public abstract class Referencia {
 
 
 
-    public abstract int contaDias(int ano, int mes, int dia);
+    public abstract int contaDias();
 
     public abstract int contaMinutos(int ano, int mes, int dia);
 
