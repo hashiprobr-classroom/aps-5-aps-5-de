@@ -2,6 +2,9 @@ package br.edu.insper.desagil.aps5.insee;
 
 public abstract class Referencia {
     String observacao;
+    public Referencia() {
+        this.observacao = "";
+    }
 
     public String getObservacao() {
         return observacao;
@@ -11,9 +14,7 @@ public abstract class Referencia {
         this.observacao = observacao;
     }
 
-    public Referencia(String observacao) {
-        this.observacao = "";
-    }
+
 
     public abstract int contaDias(int ano, int mes, int dia);
 

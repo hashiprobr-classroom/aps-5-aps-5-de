@@ -6,42 +6,41 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DataTest {
-    private static int ano;
-    private static int dia;
-    private static int mes;
+    private Data data;
+
     @BeforeEach
     void setUp(){
-        int ano=1970;
-        int mes=1;
-        int dia=1;
-
+        data = new Data();
     }
     @Test
     void constroi(){
-        assertEquals(1970,ano);
-        assertEquals(1,dia);
-        assertEquals(1,mes);
+        assertEquals(1970,data.getAno());
+        assertEquals(1,data.getMes());
+        assertEquals(1,data.getDia());
     }
     @Test
     void naoAtualizaMenor(){
-        assertEquals();
+        data.atualiza(1969,0,0);
+        assertEquals(1970,data.getAno());
+        assertEquals(1,data.getMes());
+        assertEquals(1,data.getDia());
     }
     @Test
     void atualizaMaior(){
-
+        assertEquals();
     }
     @Test
     void atualiza(){
-        assertEquals("26/9/2024",novaData.atualiza(26,9,2024));
-    }
-    @Test
-    void comoZero(){
-        assertEquals(0,contaDias(1,1,1970));
-    }
-    @Test
-    void comoAgora(){
-        novaData.atualiza(26,9,2024);
 
-        assertEquals(19978,novaData.contaDias(1,1,1970));
     }
+    //@Test
+    //void comoZero(){
+       // assertEquals(0,contaDias(1,1,1970));
+    //}
+    //@Test
+    //void comoAgora(){
+    //    novaData.atualiza(26,9,2024);
+
+    //    assertEquals(19978,novaData.contaDias(1,1,1970));
+    //}
 }

@@ -1,11 +1,12 @@
 package br.edu.insper.desagil.aps5.insee;
 
 public class Tempo extends Referencia{
-    int hora=0;
-    int minuto=0;
+    int hora;
+    int minuto;
 
-    public Tempo(String observacao) {
-        super(observacao);
+    public Tempo() {
+        this.hora = 0;
+        this.minuto = 0;
     }
 
     public int getHora() {
