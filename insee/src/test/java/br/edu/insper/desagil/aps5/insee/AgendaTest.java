@@ -36,9 +36,7 @@ public class AgendaTest {
     void adicionaInvalido(){
         evento = mock(Evento.class);
         when(evento.valido()).thenReturn(false);
-        assertThrows(IllegalArgumentException.class, () -> {
-            agenda.adiciona(evento);
-        });
+        assertThrows(IllegalArgumentException.class, () -> agenda.adiciona(evento));
 
     }
 
